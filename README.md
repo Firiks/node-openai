@@ -11,6 +11,7 @@ User interface for OpenAI.
 ## Quick start:
 
 1. ```npm install```
-2. ```node index.js```
-3. navigate to ```http://localhost:5000/```
-4. use prompts to generate images or use chatbot
+2. create .env from .env.example and past your api key
+3. ```node index.js```
+4. navigate to ```http://localhost:5000/```
+5. use prompts to generate images or use chatbot
