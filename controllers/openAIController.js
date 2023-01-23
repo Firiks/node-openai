@@ -39,20 +39,7 @@ const generateImg = async (req, res) => {
     });
 
   } catch (err) {
-    if (err.response?.status) {
-      console.error(err.response.status, err.message);
-      err.response.data.on('data', data => {
-        const message = data.toString();
-        try {
-          const parsed = JSON.parse(message);
-          console.error('An error occurred during OpenAI request: ', parsed);
-        } catch(err) {
-          console.error('An error occurred during OpenAI request: ', message);
-        }
-      });
-    } else {
-      console.error('An error occurred during OpenAI request', err);
-    }
+    console.log('Error: ', err);
 
     res.status(400).json({
       success: false,
@@ -93,20 +80,7 @@ const chatMsg = async(req, res) => {
     });
 
   } catch (err) {
-    if (err.response?.status) {
-      console.error(err.response.status, err.message);
-      err.response.data.on('data', data => {
-        const message = data.toString();
-        try {
-          const parsed = JSON.parse(message);
-          console.error('An error occurred during OpenAI request: ', parsed);
-        } catch(err) {
-          console.error('An error occurred during OpenAI request: ', message);
-        }
-      });
-    } else {
-      console.error('An error occurred during OpenAI request', err);
-    }
+    console.log('Error: ', err);
 
     res.status(400).json({
       success: false,
