@@ -67,6 +67,7 @@ const chatMsg = async(req, res) => {
       top_p: 1,
       frequency_penalty: 0.0,
       presence_penalty: 0.6,
+      n: 1, // number of completions
       stop: [" Human:", " AI:"],
     });
 
