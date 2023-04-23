@@ -55,8 +55,6 @@ const chatMsg = async(req, res) => {
 
     console.log(data);
 
-    const prompt = "The following is a conversation with an AI assistant. The assistant is helpful, creative, clever, and very friendly.\n\n" + data.prompt;
-
     console.log('prompt', prompt)
 
     const response = await openai.createCompletion({
